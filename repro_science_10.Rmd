@@ -1,16 +1,25 @@
 
-
-
 # Putting squirrels in a container
 In today's lab we'll package an rmarkdown document into a Docker container shared on Binder. The squirrels.Rmd document is similar to the report from lab 6 (but now also has a topic modeling analysis). Note that you do *not* need to knit this document or install the required libraries locally in order to proceed.
 
 ## Install holepunch
 Holepunch is not on CRAN (yet) so we need to install it from GitHub instead. To do this, first install the "remotes" package, and then run in the R console:
 ```{r}
-remotes::install_github("karthik/holepunch") 
+install.packages("remotes")
+```
 
+```{r}
+library(remotes)
+```
+
+```{r}
+remotes::install_github("karthik/holepunch") 
 ```
 Then run `library(holepunch)` to import the functions we'll need.
+```{r}
+library(holepunch)
+```
+
 
 ## Create Description file
 Create a template Description file using holepunch (filling in the strings with something more meaningful):
@@ -33,7 +42,15 @@ If you have Docker installed on your computer, you can build a Docker image from
 
 ## Generate badge, push, make public
 To make it easier for us and others to run this Docker image on Binder, we can generate a "badge" link. Use `generate_badge()` to create a badge that can be pasted into this Readme.
+```{r}
+generate_badge()
+```
+
 Paste generated code here:
+
+<!-- badges: start -->
+[![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/reproduciblescience/10-containers-cdurk/master?urlpath=rstudio)
+<!-- badges: end -->
 
 
 

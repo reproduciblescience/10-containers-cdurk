@@ -1,0 +1,20 @@
+Type: Compendium
+Package: Little Animals
+Title: Squirrels
+Version: 0.0.1
+Authors@R: 
+    person(given = "Celia",
+           family = "Durkin",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: In a container
+License: What license it uses
+Depends: 
+    knitr,
+    rmarkdown,
+    tidyverse,
+    tm,
+    topicmodels
+Encoding: UTF-8
+LazyData: true
